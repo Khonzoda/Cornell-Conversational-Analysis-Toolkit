@@ -42,7 +42,7 @@ For each utterance, we provide:
 * reply_to - index of the parent contribution. The original dataset does not provide values for the "parent" of the contribution. Hence, we introduce the following artificial conversation structure:
 
 	* Every first utterance (nomination, vote, or a non-voting comment) we encounter in the discussion does not have a parent utterance (i.e. reply-to is None)
-	* Voting comments and nominations (if they are not already first in the discussion) are replies to the first utterance in the discussion
+	* Voting comments and nominations (if they are not already the first contribution in the discussion) are replies to the first utterance in the discussion
 	* Non-voting comments are replies to either (i) the previous vote or (ii) the first utterance in the discussion if no vote has been cast yet.
 	
 * timestamp - time of the contribution, given in Unix timestamp
@@ -66,9 +66,9 @@ Below is information provided as metadata for conversations:
 * outcome_id - a nine digit index string (“3XXXXXXXX”) for the outcome as provided in the original dataset
 * outcome_label - label of the discussion outcome determined by Wikipedia admin user (ex. "delete")
 * outcome_raw_label - raw label of the discussion outcome determined by Wikipedia admin user
-* outcome_decision_maker_id - Wikipedia admin user who decided on the outcome of the Article for Deletion discussion. Here we provide information as a nine digit string "2XXXXXXXX" ID. **Note** that not all outcome decision makers appear as speakers in this ConvoKit-formatted corpus.
+* outcome_decision_maker_id - Wikipedia admin user who decided on the outcome of the Article for Deletion discussion. Here we provide information as a nine digit string "2XXXXXXXX" ID. **Note** that not all outcome decision-makers appear as speakers in this ConvoKit-formatted corpus.
 * outcome_timestamp - Unix timestamp for when the outcome was decided
-* outcome_rationale - text provided by Wikipedia admin user to explain/justify the outcome of the discussion
+* outcome_rationale - text provided by the Wikipedia admin user to explain/justify the outcome of the discussion
 
 
 Usage
