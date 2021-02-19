@@ -41,14 +41,15 @@ For each utterance, we provide:
 * conversation_id - a nine digit string ("1XXXXXXXX") as given by the index of the discussion in the original dataset
 * reply_to - index of the parent contribution. The original dataset does not provide values for the "parent" of the contribution. Hence, we introduce the following artificial conversation structure:
 
-	* Every first utterance (nomination, vote, or a non-voting comment) we encounter in the discussion does not have a parent utterance (i.e. reply-to is None).
-	* Voting comments are replies to the first utterance in the discussion.
+	* Every first utterance (nomination, vote, or a non-voting comment) we encounter in the discussion does not have a parent utterance (i.e. reply-to is None)
+	* Voting comments and nominations (if they are not already first in the discussion) are replies to the first utterance in the discussion
 	* Non-voting comments are replies to either (i) the previous vote or (ii) the first utterance in the discussion if no vote has been cast yet.
 	
 * timestamp - time of the contribution, given in Unix timestamp
 * text: text of the contribution
 
 Metadata for utterances from each category gives:
+
 * citations - a list of citations to various Wikipedia policies parsed from the text of the contribution.
 * type - "nomination", "vote", or "non-voting comment" depending on the category of the contribution
 * label - for voting contributions this provides a label for the vote parsed from the text of the contribution (ex. "keep"); for nominations and non-voting comments, the value is None
