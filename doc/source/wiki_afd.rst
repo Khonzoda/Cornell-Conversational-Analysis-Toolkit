@@ -2,7 +2,9 @@ Wikipedia Articles for Deletion Corpus
 ======================================
 A collection of Wikipedia's Articles for Deletion editor debates that occurred between January 1, 2005 and December 31, 2018. This corpus contains about 3,200,000 contributions by approximately 150,000 Wikipedia editors across almost 400,000 debates.
 
-This is a ConvoKit-formatted version of the Wikipedia Articles for Deletion `dataset <https://github.com/emayfield/AFD_Decision_Corpus>`_, originally distributed with: Mayfield, Elijah, and Alan W. Black. `"Analyzing Wikipedia Deletion Debates with a Group Decision-Making Forecast Model." <https://dl.acm.org/doi/10.1145/3359308>`_ Proceedings of the ACM on Human-Computer Interaction 3.CSCW (2019): 1-26.
+This is a ConvoKit-formatted version of the Wikipedia Articles for Deletion `dataset <https://github.com/emayfield/AFD_Decision_Corpus>`_, originally distributed with: 
+
+Mayfield, Elijah, and Alan W. Black. `"Analyzing Wikipedia Deletion Debates with a Group Decision-Making Forecast Model." <https://dl.acm.org/doi/10.1145/3359308>`_ Proceedings of the ACM on Human-Computer Interaction 3.CSCW (2019): 1-26.
 
 
 Dataset details
