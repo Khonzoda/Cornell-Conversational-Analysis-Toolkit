@@ -15,6 +15,7 @@ Speaker-level information
 Speakers in the dataset are Wikipedia users participating in Article for Deletion discussions. We use a nine digit string "2XXXXXXXX" from the original dataset to index speakers.
 
 For each speaker, the following information is provided as metadata:
+
 * name - username of the Wikipedia user or an IP address for unregistered participants
 * editcount - number of edits associated with the user, or None if not available
 * signup - date and time of this user's signup on Wikipedia in ISO 8601 format, or None if not available
@@ -27,6 +28,7 @@ Utterance-level information
 Utterances in this dataset are contributions made by Wikipedia users during Article for Deletion debates. There are three types of contributions: nominations (e.g. nomination for article deletion), votes (e.g. keep/delete), and non-voting comments.
 
 For each utterance, we provide:
+
 * id - index of the contribution as given in the original dataset. For each category, the id is a nine-digit string:
 	* nominations - "6XXXXXXXX"
 	* votes - "4XXXXXXXX"
