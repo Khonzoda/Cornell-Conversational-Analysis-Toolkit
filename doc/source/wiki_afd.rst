@@ -32,15 +32,19 @@ Utterances in this dataset are contributions made by Wikipedia users during Arti
 For each utterance, we provide:
 
 * id - index of the contribution as given in the original dataset. For each category, the id is a nine-digit string:
+
 	* nominations - "6XXXXXXXX"
 	* votes - "4XXXXXXXX"
 	* non-voting comment - "5XXXXXXXX"
+	
 * speaker - author of the contribution
 * conversation_id - a nine digit string ("1XXXXXXXX") as given by the index of the discussion in the original dataset
 * reply_to - index of the parent contribution. The original dataset does not provide values for the "parent" of the contribution. Hence, we introduce the following artificial conversation structure:
+
 	* Every first utterance (nomination, vote, or a non-voting comment) we encounter in the discussion does not have a parent utterance (i.e. reply-to is None).
 	* Voting comments are replies to the first utterance in the discussion.
 	* Non-voting comments are replies to either (i) the previous vote or (ii) the first utterance in the discussion if no vote has been cast yet.
+	
 * timestamp - time of the contribution, given in Unix timestamp
 * text: text of the contribution
 
